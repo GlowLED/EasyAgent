@@ -60,7 +60,7 @@ msg_list.append(action)
 msg_list.append(tool_output)
 
 msg_output = a(msg_list)
-print(msg_output)
+print(msg_output)   # Output: Fine!
 
 ```
 
