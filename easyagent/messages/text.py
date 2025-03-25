@@ -1,0 +1,1 @@
+from easyagent.messages.core import Message
