@@ -117,6 +117,7 @@ sdk.append(paint_tool)
 agent = ChatAgent(model=language_model, sdk=sdk)
 
 response = agent("Give me a picture about a cat girl, but in today's weather.")
+# 实际上应该传入agent一个TextMessage类型，但我们会在内部兼容字符串。
 # the agent will call the tool "weather_search", then call the tool "get_paint".
 
 response.save("cat_girl.jpg")   # response: ImageMessage, and we will implement the method "save".
