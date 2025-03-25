@@ -127,51 +127,70 @@ response.save("cat_girl.jpg")   # response: ImageMessage, and we will implement 
 ### 项目结构
 ```
 easyagent/
-  __init__.py                # 包初始化文件，导出主要API
-  
-  core/                      # 核心功能和基类
-    __init__.py              # 导出所有核心类
-    base.py                  # 所有抽象基类的实现 (Model, Message, Tool, SDK, Service, Agent)
-  
-  models/                    # 模型实现
-    __init__.py              # 导出所有模型类
-    base.py                  # 模型实现的共享代码
-    openai.py                # OpenAI接口标准模型实现
-    qwen.py                  # Qwen接口标准模型实现
-    ollama.py                # Ollama接口标准模型实现
-  
-  messages/                  # 消息类型实现
-    __init__.py              # 导出所有消息类
-    base.py                  # 消息类型的共享代码
-    text.py                  # 文本消息实现
-    image.py                 # 图像消息实现
-  
-  tools/                     # 工具实现
-    __init__.py              # 导出所有工具类
-    base.py                  # 工具的共享代码
-    search.py                # 搜索引擎工具
-    calculator.py            # 计算器工具
-  
-  sdks/                      # SDK实现
-    __init__.py              # 导出所有SDK类
-    base.py                  # SDK的共享代码
-    chat.py                  # 聊天SDK实现
-    math.py                  # 数学SDK实现
-  
-  services/                  # 服务实现
-    __init__.py              # 导出所有服务类
-    base.py                  # 服务的共享代码
-    context.py               # 上下文管理器实现
-    memory.py                # 记忆管理器实现
-  
-  agents/                    # Agent实现
-    __init__.py              # 导出所有Agent类
-    base.py                  # Agent的共享代码
-    chat_agent.py            # 聊天Agent实现
-    search_agent.py          # 搜索Agent实现
-  
-  utils/                     # 工具函数
-    __init__.py              # 导出所有工具函数
-    logging.py               # 日志相关功能
-    config.py                # 配置相关功能
+├── __init__.py               # 包初始化文件，导出主要API
+│ 
+├── core/                     # 核心功能和基类
+│   ├── __init__.py           # 导出所有核心类
+│   └── base.py               # 所有抽象基类的实现 (Model, Message, Tool, SDK, Service, Agent)
+│  
+├── models/                   # 模型实现
+│   ├── __init__.py           # 导出所有模型类
+│   ├── base.py               # 模型实现的共享代码
+│   ├── openai.py             # OpenAI接口标准模型实现
+│   ├── qwen.py               # Qwen接口标准模型实现
+│   └── ollama.py             # Ollama接口标准模型实现
+│  
+├── messages/                  # 消息类型实现
+│   ├── __init__.py            # 导出所有消息类
+│   ├── base.py                # 消息类型的共享代码
+│   ├── text.py                # 文本消息实现
+│   └── image.py               # 图像消息实现
+│  
+├── tools/                     # 工具实现
+│   ├── __init__.py            # 导出所有工具类
+│   ├── base.py                # 工具的共享代码
+│   ├── search.py              # 搜索引擎工具
+│   └── calculator.py          # 计算器工具
+│  
+├── sdks/                      # SDK实现
+│   ├── __init__.py            # 导出所有SDK类
+│   ├── base.py                # SDK的共享代码
+│   ├── chat.py                # 聊天SDK实现
+│   └── math.py                # 数学SDK实现
+│  
+├── services/                  # 服务实现
+│   ├── __init__.py            # 导出所有服务类
+│   ├── base.py                # 服务的共享代码
+│   ├── context.py             # 上下文管理器实现
+│   └── memory.py              # 记忆管理器实现
+│  
+├── agents/                    # Agent实现
+│   ├── __init__.py            # 导出所有Agent类
+│   ├── base.py                # Agent的共享代码
+│   ├── chat_agent.py          # 聊天Agent实现
+│   └── search_agent.py        # 搜索Agent实现
+│  
+├── utils/                     # 工具函数
+│   ├── __init__.py            # 导出所有工具函数
+│   ├── logging.py             # 日志相关功能
+│   └── config.py              # 配置相关功能
+│
+├── webui/                     # WebUI 核心模块
+│   ├── __init__.py            # WebUI实现
+│   ├── routes.py              # Flask 路由定义
+│   ├── templates/             # 控制面板前端模板
+│   │   ├── dashboard.html     # 主控制面板
+│   │   └── logs.html          # 日志查看页面
+│   ├── static/                # Web静态文件
+│   │   ├── css/
+│   │   │   └── dashboard.css  # WebUI样式
+│   │   ├── js/
+│   │   │   ├── dashboard.js   # 前端交互逻辑
+│   │   │   └── charts.js      # 监控图表组件
+│   │   └── img/               # 图标等资源
+│   └── utils/
+│       ├── monitor.py         # 系统监控工具函数
+│       └── auth.py            # 简单权限控制
+├── config.py                  # WebUI 配置文件
+└── run_web.py                 # Web服务启动入口
 ```
