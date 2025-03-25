@@ -1,8 +1,0 @@
-setup.py
-easyagent/__init__.py
-easyagent.egg-info/PKG-INFO
-easyagent.egg-info/SOURCES.txt
-easyagent.egg-info/dependency_links.txt
-easyagent.egg-info/top_level.txt
-easyagent/core/__init__.py
-easyagent/core/base.py
