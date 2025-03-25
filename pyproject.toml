@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easyagent"
+version = "0.1.0"
+description = "快速构建你的AI Agent"
+readme = "README.md"
+authors = [{name = "OpenEasyAgent"}]
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+requires-python = ">=3.8"
+dependencies = [
+    # 项目依赖
+]
+
+[project.urls]
+"Homepage" = "https://github.com/GlowLED/easyagent"
+"Bug Tracker" = "https://github.com/GlowLED/easyagent/issues"
+
+[tool.setuptools]
+packages = ["easyagent"]
+
+# 可选：测试配置
+[tool.pytest]
+testpaths = ["tests"]

@@ -1,0 +1,83 @@
+# 字节编译/优化/DLL文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 包安装/构建文件
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# 虚拟环境
+venv/
+env/
+ENV/
+.venv/
+.env/
+.conda/
+
+# IDE相关
+.idea/
+.vscode/
+*.swp
+*.swo
+.project
+.pydevproject
+.spyderproject
+.spyproject
+.ropeproject
+
+# 测试覆盖率
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 日志文件
+*.log
+logs/
+
+# 运行时数据
+*.pid
+*.seed
+*.pid.lock
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 敏感/本地配置
+.env
+config.local.yaml
+secret_keys.json
+api_keys.txt
+
+# 大型模型文件和数据文件
+*.h5
+*.pkl
+*.model
+data/large_files/
+models/weights/
