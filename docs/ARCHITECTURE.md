@@ -179,18 +179,17 @@ easyagent/
 │   ├── __init__.py            # WebUI实现
 │   ├── routes.py              # Flask 路由定义
 │   ├── templates/             # 控制面板前端模板
-│   │   ├── dashboard.html     # 主控制面板
-│   │   └── logs.html          # 日志查看页面
+│   │   └── dashboard.html     # 主控制面板
+│   │
 │   ├── static/                # Web静态文件
 │   │   ├── css/
 │   │   │   └── dashboard.css  # WebUI样式
 │   │   ├── js/
-│   │   │   ├── dashboard.js   # 前端交互逻辑
-│   │   │   └── charts.js      # 监控图表组件
+│   │   │   └── dashboard.js   # 前端交互逻辑
+│   │   │
 │   │   └── img/               # 图标等资源
 │   └── utils/
-│       ├── monitor.py         # 系统监控工具函数
-│       └── auth.py            # 简单权限控制
-├── config.py                  # WebUI 配置文件
+│       └── monitor.py         # 系统监控工具函数
+│
 └── run_web.py                 # Web服务启动入口
 ```
