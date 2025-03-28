@@ -1,0 +1,25 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+    <!-- EXAMPLE -->
+    <div class="container">
+        <!-- 系统资源卡片 -->
+        <div class="card">
+            <h3>📊 系统监控</h3>
+            <div id="system-metrics"></div>
+        </div>
+        
+        <!-- Agent控制表格 -->
+        <div class="card">
+            <h3>🤖 运行中的Agent</h3>
+            <table id="agent-table"></table>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>
