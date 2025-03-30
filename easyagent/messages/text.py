@@ -17,7 +17,7 @@ class TextMessage(Message):
         "required": ["text"]
     }
     
-    def __init__(self, text: str, source: str = "system"):
+    def __init__(self, text: str, source: str = "system") -> None:
         """
         初始化文本消息
         :param text: 文本内容
@@ -27,11 +27,11 @@ class TextMessage(Message):
         self.text = text
         self.source = source
 
-    def __str__(self):
+    def __str__(self) -> str:
         return self.text
 
-    def __repr__(self):
-        return f"<TextMessage: {self.text}>"
+    def __repr__(self) -> str:
+        return f"<TextMessage: {self.text}, source: {self.source}>"
 
     def __add__(self, other: "TextMessage") -> "TextMessage":
         """

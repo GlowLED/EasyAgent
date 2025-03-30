@@ -7,6 +7,7 @@ __author__ = "OpenEasyAgent"
 
 # 导入子模块以便用户能够更轻松地访问它们
 from . import core
+from . import messages
 """from . import models
 from . import messages
 from . import tools
